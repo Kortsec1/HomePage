@@ -177,14 +177,14 @@ a {
 .content_container {
     background-color: var(--bk-color-white);
     border-radius: 20px;
-    width: 740px;
+    width: 760px;
     height: 360px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 20px 30px;
+    margin: 20px 20px;
 }
 
 .calender {

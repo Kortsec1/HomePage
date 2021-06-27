@@ -1,0 +1,108 @@
+:root {
+    --banner-img-count: 3;
+    --grad-color-wine: linear-gradient(to right, #734b6d, #42275a);
+    --font-hover-white: #b9b9b9;
+    --font-color-black: #292929;
+    --font-color-white: #e6e6e6;
+    --font-color-wine: #472c5e;
+    --bk-hover-orange: #f4a5609f;
+    --bk-color-black: #535353;
+    --bk-color-white: #F3F2DA;
+    --bk-color-green: #71a05b;
+    --bk-color-orange: #a0885b;
+}
+
+* {
+    font-family: 'Noto Serif KR', serif;
+    user-select: none;
+}
+
+body {
+    background-color: var(--bk-color-black);
+
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-color: var(--bk-color-white);
+    width: 820px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+.bar {
+    background: var(--grad-color-wine);
+    width: 800px;
+    height: 50px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.logo {
+    font-size: 22px;
+    margin: 10px;
+}
+
+.logo>i {
+    color: var(--font-color-white);
+    padding-left: 10px;
+}
+
+.logo>a {
+    color: var(--font-color-white);
+}
+
+.logo:hover, .logo>i:hover {
+    cursor: pointer;
+}
+
+.bar>ul {
+    width: 470px;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.bar>ul>li>a {
+    font-size: 15px;
+    color: var(--font-color-white);
+
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+.bar>ul>li>a:hover {
+    border-radius: 8px;
+    background-color: var(--bk-hover-orange);
+}
+
+.contact {
+    color: var(--font-color-white);
+    font-size: 24px;
+    padding: 8px 10px;
+}
+
+.contact>i:hover {
+    color: var(--font-hover-white);
+    cursor: pointer;
+}
