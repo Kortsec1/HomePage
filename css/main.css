@@ -1,6 +1,7 @@
 :root {
     --banner-img-count: 3;
-    --grad-color-wine: linear-gradient(to right, #734b6d, #42275a);
+    --grad-wine-right: linear-gradient(to right, #734b6d, #42275a);
+    --grad-wine-bottom-right: linear-gradient(to bottom right, #734b6d, #42275a);
     --font-hover-white: #b9b9b9;
     --font-color-black: #292929;
     --font-color-white: #e6e6e6;
@@ -46,7 +47,7 @@ a {
 
 
 .bar {
-    background: var(--grad-color-wine);
+    background: var(--grad-wine-right);
     width: 800px;
     height: 50px;
     
@@ -169,7 +170,7 @@ a {
 .content {
     width: 800px;
     height: 400px;
-    background: var(--grad-color-wine);
+    background: var(--grad-wine-right);
 
     margin: 10px;
 }

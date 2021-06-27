@@ -1,6 +1,7 @@
 :root {
     --banner-img-count: 3;
-    --grad-color-wine: linear-gradient(to right, #734b6d, #42275a);
+    --grad-wine-right: linear-gradient(to right, #734b6d, #42275a);
+    --grad-wine-bottom-right: linear-gradient(to bottom right, #734b6d, #42275a);
     --font-hover-white: #b9b9b9;
     --font-color-black: #292929;
     --font-color-white: #e6e6e6;
@@ -46,7 +47,7 @@ a {
 
 
 .bar {
-    background: var(--grad-color-wine);
+    background: var(--grad-wine-right);
     width: 800px;
     height: 50px;
     
@@ -105,4 +106,54 @@ a {
 .contact>i:hover {
     color: var(--font-hover-white);
     cursor: pointer;
+}
+
+
+
+
+
+.content {
+    width: 800px;
+    height: 700px;
+    background: var(--grad-wine-bottom-right);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.progress {
+    width: 750px;
+    height: 150px;
+    background-color: red;
+}
+
+.lists {
+    list-style: none;
+    width: 750px;
+    height: 400px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.lists>li>div {
+    width: 500px;
+    height: 40px;
+    background-color: var(--bk-color-white);
+    margin: 5px;
+}
+
+.lists>li>div>p {
+}
+
+.options {
+    width: 750px;
+    height: 60px;
+    background-color: red;
 }
