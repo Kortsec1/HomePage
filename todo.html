@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/todo.css">
+    <link rel="stylesheet" href="./css/loading-bar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Noto+Serif+KR:wght@200&display=swap"
@@ -34,37 +35,61 @@
         </nav>
 
         <div class="content">
-            <div class="progress">
-
+            <div class="down">
+                <div class="phrase">
+                    <p>{&nbsp;&nbsp;</p><p id="PH"></p><p>&nbsp;&nbsp;&nbsp;}</p>
+                </div>
             </div>
 
-            <ul class="lists">
-                <li>
-                    <div><p>콩이 산책시키기</p></div>
-                </li>
-                <li>
-                    <div><p>독서하기</p></div>
-                </li>
-                <li>
-                    <div><p>수학 문제 풀기</p></div>
-                </li>
-                <li>
-                    <div><p>운동하기</p></div>
-                </li>
-                <li>
-                    <div><p>영어단어 외우기</p></div>
-                </li>
-                <li>
-                    <div><p>수학공식 외우기</p></div>
-                </li>
-            </ul>
+            <div class="todolist">
+                <div class="opt">
+                    <div class="add">
+                        <i class="fas fa-plus-square"></i>
+                        <a href="#">Add</a>
+                    </div>
+                    <div class="del">
+                        <i class="fas fa-trash-alt"></i>
+                        <a href="#">Delete</a>
+                    </div>
+                </div>
 
-            <div class="options">
+                <ul class="lists">
+                    <li class="fin_li">
+                        <div id="div_1" class="fin_item"><p>콩이 산책시키기</p></div>
+                        <i class="fas fa-check-square"></i>
+                    </li>
+                    <li>
+                        <div id="div_2"><p>독서하기</p></div>
+                        <button id="2" onclick="done(this.id);"><p>done</p></button>
+                    </li>
+                    <li>
+                        <div id="div_3"><p>수학 문제 풀기</p></div>
+                        <button id="3" onclick="done(this.id);"><p>done</p></button>
+                    </li>
+                    <li>
+                        <div id="div_4"><p>운동하기</p></div>
+                        <button id="4" onclick="done(this.id);"><p>done</p></button>
+                    </li>
+                    <li>
+                        <div id="div_5"><p>영어단어 외우기</p></div>
+                        <button id="5" onclick="done(this.id);"><p>done</p></button>
+                    </li>
+                    <li>
+                        <div id="div_6"><p>수학공식 외우기</p></div>
+                        <button id="6" onclick="done(this.id);"><p>done</p></button>
+                    </li>
+                </ul>
+            </div>
 
+            <div class="progress">
+                <div id="bar" class="ldBar" data-preset="rainbow" style="width: 90%; height: 90%;"></div>
             </div>
         </div>
+
+        
     </div>
-    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/loading-bar.js"></script>
+    <script type="text/javascript" src="./js/todo.js"></script>
     <script src="https://kit.fontawesome.com/7d9f8f879c.js" crossorigin="anonymous"></script>
 </body>
 

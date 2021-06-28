@@ -6,11 +6,17 @@
     --font-color-black: #292929;
     --font-color-white: #e6e6e6;
     --font-color-wine: #472c5e;
+    --font-color-pink: #ffcee4;
+    --font-color-yellow: #F0A500;
     --bk-hover-orange: #f4a5609f;
+    --bk-hover-gray: rgba(41, 41, 41, 0.342);
+    --bk-color-ivory: #D6D2C4;
+    --bk-color-wooden: #5D534A;
     --bk-color-black: #535353;
     --bk-color-white: #F3F2DA;
     --bk-color-green: #71a05b;
     --bk-color-orange: #a0885b;
+    --bk-color-green: #056676;
 }
 
 * {
@@ -29,6 +35,10 @@ body {
 
 a {
     text-decoration: none;
+}
+
+p {
+    margin: 0;
 }
 
 .container {
@@ -116,44 +126,183 @@ a {
     width: 800px;
     height: 700px;
     background: var(--grad-wine-bottom-right);
-    margin: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 10px;
 }
 
 .progress {
+    width: 800px;
+    height: 130px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.todolist {
+    display: flex;
+    justify-content: space-around;
     width: 750px;
-    height: 150px;
-    background-color: red;
+    height: 400px;
 }
 
 .lists {
     list-style: none;
-    width: 750px;
-    height: 400px;
-    background-color: yellow;
+    width: 550px;
+    height: 360px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     margin: 0;
+    padding: 20px 0 0 20px;
+}
+
+.lists>li {
+    display: flex;
+}
+
+.lists>li>button {
+    background-color: var(--bk-hover-gray);
+    color: var(--font-color-white);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    margin-top: 15px;
     padding: 0;
 }
 
-.lists>li>div {
-    width: 500px;
-    height: 40px;
+.lists>li>button:hover {
+    cursor: pointer;
+    border: 2px solid var(--font-color-pink);
+}
+
+.lists>li>button:active {
+    background-color: var(--font-color-pink);
+    color: var(--font-color-black);
+}
+
+.lists>li>div:not(.fin_item) {
+    width: 350px;
+    height: 35px;
     background-color: var(--bk-color-white);
+    margin: 10px 10px 0 0;
+    border-radius: 15px;
+    padding: 10px 15px 0 25px;
+}
+
+.fin_item {
+    text-align: right;
+    width: 350px;
+    height: 35px;
+    background-color: var(--bk-hover-gray);
+    margin: 10px 10px 0 0;
+    border-radius: 15px;
+    padding: 10px 15px 0 25px;
+}
+
+.fin_li>i {
+    margin-top: 15px;
+    color: var(--bk-color-green);
+    font-size: 35px;
+    width: 50px;
+    height: 30px;
+}
+
+.opt {
+    position: relative;
+    background-color: var(--bk-hover-gray);
+    border-radius: 10px;
+    width: 120px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.del, .add {
+    border-radius: 5px;
+    font-size: 20px;
+    color: var(--font-color-yellow);
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add>a, .del>a {
+    text-decoration: none;
+    color: var(--font-color-pink);
     margin: 5px;
 }
 
-.lists>li>div>p {
+.del:hover, .add:hover {
+    background-color: var(--bk-color-orange);
+    cursor: pointer;
 }
 
-.options {
+.down {
     width: 750px;
-    height: 60px;
-    background-color: red;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.phrase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 80px;
+}
+
+.phrase>p {
+    font-size: 30px;
+    color: var(--font-color-pink);
+}
+
+.phrase p:nth-child(3) {
+    position: relative;
+}
+
+.phrase p:nth-child(3):before {
+    position: absolute;
+    content: "|";
+    font-size: 32px;
+    color: var(--font-color-white);
+    top: 12px;
+    left: 5px;
+    animation-name: blink;
+    animation-duration: .4s;
+    animation-iteration-count: infinite;
+}
+
+.phrase p:nth-child(2n-1) {
+    margin-bottom: 5px;
+    font-size: 50px;
+}
+
+
+
+
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

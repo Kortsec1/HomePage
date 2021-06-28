@@ -6,11 +6,17 @@
     --font-color-black: #292929;
     --font-color-white: #e6e6e6;
     --font-color-wine: #472c5e;
+    --font-color-pink: #ffcee4;
+    --font-color-yellow: #F0A500;
     --bk-hover-orange: #f4a5609f;
+    --bk-hover-gray: rgba(41, 41, 41, 0.342);
+    --bk-color-ivory: #D6D2C4;
+    --bk-color-wooden: #5D534A;
     --bk-color-black: #535353;
     --bk-color-white: #F3F2DA;
     --bk-color-green: #71a05b;
     --bk-color-orange: #a0885b;
+    --bk-color-green: #056676;
 }
 
 * {
