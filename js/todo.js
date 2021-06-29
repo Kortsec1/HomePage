@@ -46,6 +46,7 @@ bar.set(100);
 
 var add_window = document.querySelector(".add_bk");
     del_window = document.querySelector(".del_bk");
+    inp_item = document.querySelector("#inp_item");
 
 function open_add() {
     add_window.style.display = "block";
@@ -53,6 +54,7 @@ function open_add() {
 
 function close_add() {
     add_window.style.display = "none";
+    inp_item.value = "";
 }
 
 function open_del(id) {
