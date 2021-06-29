@@ -43,40 +43,50 @@
 
             <div class="todolist">
                 <div class="opt">
-                    <div class="add">
-                        <i class="fas fa-plus-square"></i>
-                        <a href="#">Add</a>
+                    <div class="add" onclick="open_add();">
+                        <i class="fas fa-plus-square" onclick="open_add();"></i>
+                        <a onclick="open_add();">Add</a>
                     </div>
-                    <div class="del">
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="#">Delete</a>
+                    <div class="del" onclick="set_del();">
+                        <i class="fas fa-trash-alt" onclick="set_del();"></i>
+                        <a onclick="set_del();">Delete</a>
+                    </div>
+                    <div class="done" onclick="fin_del();">
+                        <i class="fas fa-check-square" onclick="fin_del();"></i>
+                        <a onclick="fin_del();">Done</a>
                     </div>
                 </div>
 
                 <ul class="lists">
                     <li class="fin_li">
-                        <div id="div_1" class="fin_item"><p>콩이 산책시키기</p></div>
-                        <i class="fas fa-check-square"></i>
+                        <button id="del_1" class="del_but" onclick="open_del(parseInt(this.id[4]));"><p>delete</p></button>
+                        <div id="div_1" class="fin_item items"><p><del>콩이 산책시키기</del></p></div>
+                        <i class="fas fa-check-square" id="chk_icon"></i>
                     </li>
                     <li>
-                        <div id="div_2"><p>독서하기</p></div>
-                        <button id="2" onclick="done(this.id);"><p>done</p></button>
+                        <button id="del_2" class="del_but" onclick="open_del(parseInt(this.id[4]));"><p>delete</p></button>
+                        <div id="div_2" class="items"><p>독서하기</p></div>
+                        <button id="2" class="done_but" onclick="done(this.id);"><p>done</p></button>
                     </li>
                     <li>
-                        <div id="div_3"><p>수학 문제 풀기</p></div>
-                        <button id="3" onclick="done(this.id);"><p>done</p></button>
+                        <button id="del_3" class="del_but" onclick="open_del(parseInt(this.id[4]));"><p>delete</p></button>
+                        <div id="div_3" class="items"><p>수학 문제 풀기</p></div>
+                        <button id="3" class="done_but" onclick="done(this.id);"><p>done</p></button>
                     </li>
                     <li>
-                        <div id="div_4"><p>운동하기</p></div>
-                        <button id="4" onclick="done(this.id);"><p>done</p></button>
+                        <button id="del_4" class="del_but" onclick="open_del(parseInt(this.id[4]));"><p>delete</p></button>
+                        <div id="div_4" class="items"><p>운동하기</p></div>
+                        <button id="4" class="done_but" onclick="done(this.id);"><p>done</p></button>
                     </li>
                     <li>
-                        <div id="div_5"><p>영어단어 외우기</p></div>
-                        <button id="5" onclick="done(this.id);"><p>done</p></button>
+                        <button id="del_5" class="del_but" onclick="open_del(parseInt(this.id[4]));"><p>delete</p></button>
+                        <div id="div_5" class="items"><p>영어단어 외우기</p></div>
+                        <button id="5" class="done_but" onclick="done(this.id);"><p>done</p></button>
                     </li>
                     <li>
-                        <div id="div_6"><p>수학공식 외우기</p></div>
-                        <button id="6" onclick="done(this.id);"><p>done</p></button>
+                        <button id="del_6" class="del_but" onclick="open_del(parseInt(this.id[4]));"><p>delete</p></button>
+                        <div id="div_6" class="items"><p>수학공식 외우기</p></div>
+                        <button id="6" class="done_but" onclick="done(this.id);"><p>done</p></button>
                     </li>
                 </ul>
             </div>
@@ -85,8 +95,32 @@
                 <div id="bar" class="ldBar" data-preset="rainbow" style="width: 90%; height: 90%;"></div>
             </div>
         </div>
+    </div>
 
-        
+    <div class="add_bk">
+        <div class="add_window">
+            <form action="#" method="post">
+                <div class="inp_data">
+                    <input type="text">
+                </div>
+                <div class="inp_but">
+                    <input type="button" value="cancel" onclick="close_add();">
+                    <input type="submit" value="add">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="del_bk">
+        <div class="del_window">
+            <div class="message">
+                <p>삭제 하시겠습니까?</p>
+            </div>
+            <div class="del_confirm_but">
+                <button class="confirm" onclick="close_del();">아니요</button>
+                <button class="confirm">네</button>
+            </div>
+        </div>
     </div>
     <script type="text/javascript" src="./js/loading-bar.js"></script>
     <script type="text/javascript" src="./js/todo.js"></script>

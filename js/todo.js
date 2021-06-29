@@ -7,8 +7,7 @@ const content = ["피할 수 없으면 즐겨라.",
                 "내일은 내일의 태양이 뜬다.",
                 "작은 기회로 부터 종종 위대한 업적이 시작된다.",
                 "겨울이 오면 봄이 멀지 않으리.",
-                "나는 생각한다. 고로 존재한다.",
-                "오늘은 어제 죽은 이가 그토록 그리던 내일이다."];
+                "나는 생각한다. 고로 존재한다."];
     text = document.querySelector("#PH");
     ty_int = "";
 let type_index = 0;
@@ -46,4 +45,74 @@ start_typing();
 var bar = new ldBar("#bar");
 bar.set(100);
 
+var add_window = document.querySelector(".add_bk");
+    del_window = document.querySelector(".del_bk");
 
+function open_add() {
+    add_window.style.display = "block";
+}
+
+function close_add() {
+    add_window.style.display = "none";
+}
+
+function open_del(id) {
+    del_window.style.display = "block";
+}
+
+function close_del(id) {
+    del_window.style.display = "none";
+}
+
+var del_but = document.querySelectorAll(".del_but");
+    item = document.querySelectorAll(".items");
+    done_but = document.querySelectorAll(".done_but");
+    fin_but = document.querySelector(".done");
+    add_but = document.querySelector(".add");
+    menu_del_but = document.querySelector(".del");
+    check_icon = document.querySelectorAll("#chk_icon");
+
+function set_del() {
+    for(var i=0; i<item.length; i++) {
+        item[i].style.transform = "translateX(53px)";
+        item[i].style.transitionDuration = "1s";
+        del_but[i].style.display = "block";
+    }
+    
+    for(var j=0; j<done_but.length; j++) {
+        done_but[j].style.display = "none";
+    }
+
+    for(var k=0; k<check_icon.length; k++) {
+        check_icon[k].style.transform = "translateX(53px)";
+        check_icon[k].style.transitionDuration = "1s";
+    }
+
+    fin_but.style.display = "flex";
+    add_but.style.display = "none";
+    menu_del_but.style.display = "none";
+}
+
+function fin_del() {
+    for (var i = 0; i < item.length; i++) {
+        item[i].style.transform = "";
+        del_but[i].style.display = "none";
+    }
+
+    for (var j = 0; j < done_but.length; j++) {
+        done_but[j].style.display = "block";
+    }
+
+    for (var k = 0; k < check_icon.length; k++) {
+        check_icon[k].style.transform = "";
+        check_icon[k].style.transitionDuration = "1s";
+    }
+
+    fin_but.style.display = "none";
+    add_but.style.display = "flex";
+    menu_del_but.style.display = "flex";
+}
+
+function done(id) {
+    console.log("done! : " + String(id));
+}

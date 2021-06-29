@@ -17,6 +17,7 @@
     --bk-color-green: #71a05b;
     --bk-color-orange: #a0885b;
     --bk-color-green: #056676;
+    --bk-color-red: #ff4444;
 }
 
 * {
@@ -162,10 +163,35 @@ p {
 }
 
 .lists>li {
+    position: relative;
     display: flex;
 }
 
-.lists>li>button {
+.del_but {
+    position: absolute;
+    display: none;
+    width: 55px;
+    height: 30px;
+    margin: 19px 10px 0 0;
+    background-color: var(--bk-hover-gray);
+    color: var(--font-color-white);
+    border: none;
+    border-radius: 10px 0 0 10px;
+    z-index: 1;
+}
+
+.del_but:hover {
+    border: 2px solid var(--bk-color-red);
+    border-right: none;
+    cursor: pointer;
+}
+
+.del_but:active {
+    background-color: var(--bk-color-red);
+    color: var(--font-color-white);
+}
+
+.done_but {
     background-color: var(--bk-hover-gray);
     color: var(--font-color-white);
     border-radius: 10px;
@@ -177,12 +203,12 @@ p {
     padding: 0;
 }
 
-.lists>li>button:hover {
+.done_but:hover {
     cursor: pointer;
     border: 2px solid var(--font-color-pink);
 }
 
-.lists>li>button:active {
+.done_but:active {
     background-color: var(--font-color-pink);
     color: var(--font-color-black);
 }
@@ -194,16 +220,20 @@ p {
     margin: 10px 10px 0 0;
     border-radius: 15px;
     padding: 10px 15px 0 25px;
+    z-index: 2;
 }
 
 .fin_item {
     text-align: right;
     width: 350px;
     height: 35px;
-    background-color: var(--bk-hover-gray);
+    /* background-color: var(--bk-hover-gray); */
+    background-color: var(--bk-color-green);
+    border: 2px solid var(--bk-color-green);
     margin: 10px 10px 0 0;
     border-radius: 15px;
     padding: 10px 15px 0 25px;
+    z-index: 2;
 }
 
 .fin_li>i {
@@ -226,7 +256,7 @@ p {
     align-items: center;
 }
 
-.del, .add {
+.del, .add, .done {
     border-radius: 5px;
     font-size: 20px;
     color: var(--font-color-yellow);
@@ -237,15 +267,19 @@ p {
     align-items: center;
 }
 
-.add>a, .del>a {
+.add>a, .del>a, .done>a {
     text-decoration: none;
     color: var(--font-color-pink);
     margin: 5px;
 }
 
-.del:hover, .add:hover {
+.del:hover, .add:hover, .done:hover {
     background-color: var(--bk-color-orange);
     cursor: pointer;
+}
+
+.done {
+    display: none;
 }
 
 .down {
@@ -288,6 +322,85 @@ p {
 .phrase p:nth-child(2n-1) {
     margin-bottom: 5px;
     font-size: 50px;
+}
+
+.add_bk, .del_bk {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.644);
+    z-index: 10000;
+}
+
+.add_window {
+    position: absolute;
+    width: 550px;
+    height: 200px;
+    background-color: var(--bk-color-white);
+    border-radius: 10px;
+    top: calc(50% - 100px);
+    left: calc(50% - 275px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.del_window {
+    position: absolute;
+    width: 550px;
+    height: 200px;
+    background-color: var(--bk-color-white);
+    border-radius: 10px;
+    top: calc(50% - 100px);
+    left: calc(50% - 275px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inp_data>input {
+    padding-left: 10px;
+    width: 400px;
+    height: 50px;
+    border: none;
+}
+
+.inp_data>input:focus {
+    outline: none;
+}
+
+.inp_but {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.del_confirm_but {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.inp_but>input,
+.confirm {
+    border-radius: 10px;
+    border: 2px solid var(--bk-color-wooden);
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.inp_but>input:hover,
+.confirm:hover {
+    cursor: pointer;
+    background-color: var(--bk-color-wooden);
+    color: var(--font-color-white);
 }
 
 
